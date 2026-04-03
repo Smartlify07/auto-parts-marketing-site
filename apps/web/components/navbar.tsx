@@ -41,7 +41,7 @@ export function Navbar() {
         ))}
       </div>
 
-      <Button className="h-12 w-40 uppercase">Get a quote</Button>
+      <Button className="h-12 w-32 uppercase">Get a quote</Button>
     </nav>
   )
 }
