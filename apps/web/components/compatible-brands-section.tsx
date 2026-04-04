@@ -4,7 +4,7 @@ import NissanLogo from "@/app/images/Nissan_logo logo.svg"
 import SubaruLogo from "@/app/images/Subaru_logo logo.svg"
 import LexusLogo from "@/app/images/Vector.svg"
 import ToyotaLogo from "@/app/images/toyota logo.svg"
-export default function CompatibleBrandsSection() {
+export function CompatibleBrandsSection() {
   return (
     <section className="mx-auto flex flex-col items-center justify-center gap-10 px-10 py-20 lg:px-0">
       <h4 className="text-center font-semibold tracking-[40%] text-foreground">
