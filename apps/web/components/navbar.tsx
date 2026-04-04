@@ -24,7 +24,7 @@ export function Navbar() {
         width={120}
         height={40}
       />
-      <div className="flex items-center gap-10">
+      <div className="hidden items-center gap-10 lg:flex">
         {menu.map((item) => (
           <Link
             className={cn(
@@ -41,7 +41,15 @@ export function Navbar() {
         ))}
       </div>
 
-      <Button className="h-12 w-32 uppercase">Get a quote</Button>
+      <Button className="hidden h-12 w-32 uppercase lg:flex">
+        Get a quote
+      </Button>
+
+      <div className="flex flex-col gap-1 lg:hidden">
+        <span className="h-1 w-12 bg-foreground"></span>
+        <span className="h-1 w-12 bg-foreground"></span>
+        <span className="h-1 w-12 bg-foreground"></span>
+      </div>
     </nav>
   )
 }
