@@ -5,7 +5,7 @@ import React from "react"
 
 export function HeroSection() {
   return (
-    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-10 py-20 lg:px-0">
+    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
       <div className="flex flex-col items-center gap-10">
         <h4 className="text-center font-semibold tracking-[40%] text-foreground">
           CERTIFIED WHOLESALE DISTRIBUTOR

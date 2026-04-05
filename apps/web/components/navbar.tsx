@@ -16,7 +16,7 @@ export function Navbar() {
   const pathname = usePathname()
   console.log(pathname)
   return (
-    <nav className="flex items-center justify-between bg-background px-10 py-10">
+    <nav className="flex items-center justify-between bg-background px-6 py-10 lg:px-10">
       <Image
         src={Logo}
         alt="Company Logo"

@@ -54,7 +54,7 @@ const catalogue = [
 ]
 export function CatalogueSection() {
   return (
-    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-10 py-20">
+    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
       <div className="flex w-full max-w-7xl flex-col items-center gap-10">
         <header className="flex flex-col items-center gap-6 text-center">
           <h4 className="text-base font-medium tracking-[40%] text-primary uppercase">
@@ -95,7 +95,7 @@ function CatalogueCard({
   return (
     <Card className="gap-6 py-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] ring-0">
       <CardHeader className="flex flex-col items-center gap-6">
-        <CardTitle className="text-center text-base font-normal tracking-[2%] text-primary">
+        <CardTitle className="text-center font-sans text-base font-normal tracking-[2%] text-primary">
           0{id}
         </CardTitle>
         <div className="flex size-16 items-center justify-center rounded-md bg-primary/5">

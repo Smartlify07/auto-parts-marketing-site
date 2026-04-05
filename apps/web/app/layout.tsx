@@ -3,6 +3,7 @@ import {
   Geist_Mono,
   Instrument_Sans,
   JetBrains_Mono,
+  Slackey,
 } from "next/font/google"
 
 import "@workspace/ui/globals.css"
@@ -14,6 +15,12 @@ const instrumentSans = Instrument_Sans({
   variable: "--font-sans",
 })
 
+const slackey = Slackey({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400"],
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +30,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", instrumentSans.variable)}
+      className={cn("antialiased", instrumentSans.variable, slackey.variable)}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
