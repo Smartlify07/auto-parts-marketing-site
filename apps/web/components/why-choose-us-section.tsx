@@ -86,8 +86,8 @@ function WhyChooseUsCard({
   return (
     <Card className="gap-6 border-r border-b px-5 py-10 ring-0 last:border-b-0 lg:nth-of-type-[3]:border-b-0">
       <div className="flex items-center justify-between">
-        <div className="flex size-12 items-center justify-center rounded-lg bg-primary/5">
-          <CardIcon className="size-6" />
+        <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
+          <CardIcon className="size-6 text-primary" />
         </div>
         <h1 className="font-mono text-5xl tracking-[11%] text-primary/5">
           0{index}
