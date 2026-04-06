@@ -82,7 +82,9 @@ export function ContactUsSection() {
             <ContactInfoCard {...info} key={i} />
           ))}
         </div>
-        <ContactForm />
+        <div className="w-full bg-[#F7F7F9] p-10">
+          <ContactForm />
+        </div>
       </div>
     </section>
   )
@@ -127,7 +129,12 @@ function ContactForm() {
             </FieldLegend>
             <FieldGroup>
               <Field>
-                <Input id="first_name" placeholder="First Name" required />
+                <Input
+                  className="bg-background"
+                  id="first_name"
+                  placeholder="First Name"
+                  required
+                />
               </Field>
             </FieldGroup>
           </FieldSet>
@@ -137,7 +144,12 @@ function ContactForm() {
             </FieldLegend>
             <FieldGroup>
               <Field>
-                <Input id="last_name" placeholder="Last Name" required />
+                <Input
+                  className="bg-background"
+                  id="last_name"
+                  placeholder="Last Name"
+                  required
+                />
               </Field>
             </FieldGroup>
           </FieldSet>
@@ -149,6 +161,7 @@ function ContactForm() {
             <FieldGroup>
               <Field>
                 <Input
+                  className="bg-background"
                   id="business_name"
                   placeholder="Enter your business name"
                 />
@@ -162,6 +175,7 @@ function ContactForm() {
             <FieldGroup>
               <Field>
                 <Input
+                  className="bg-background"
                   id="phone"
                   placeholder="Enter your phone number"
                   type="tel"
@@ -177,7 +191,10 @@ function ContactForm() {
             <FieldGroup>
               <Field>
                 <Select defaultValue="">
-                  <SelectTrigger id="checkout-7j9-exp-year-f59">
+                  <SelectTrigger
+                    className="bg-background"
+                    id="checkout-7j9-exp-year-f59"
+                  >
                     <SelectValue placeholder="Select Enquiry type" />
                   </SelectTrigger>
                   <SelectContent className={"rounded-[5px]"}>
@@ -209,7 +226,7 @@ function ContactForm() {
                 <Textarea
                   id="message"
                   placeholder="Add any additional comments"
-                  className="resize-none"
+                  className="min-h-30 resize-none bg-background"
                 />
               </Field>
             </FieldGroup>
