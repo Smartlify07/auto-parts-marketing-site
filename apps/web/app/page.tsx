@@ -1,5 +1,6 @@
 import { CatalogueSection } from "@/components/catalogue-section"
 import { CompatibleBrandsSection } from "@/components/compatible-brands-section"
+import { ContactUsSection } from "@/components/contact-us-section"
 import { CustomerReviewsSection } from "@/components/customer-reviews"
 import { HeroSection } from "@/components/hero-section"
 import { Navbar } from "@/components/navbar"
@@ -14,6 +15,7 @@ export default function Page() {
       <CatalogueSection />
       <WhyChooseUsSection />
       <CustomerReviewsSection />
+      <ContactUsSection />
     </>
   )
 }
