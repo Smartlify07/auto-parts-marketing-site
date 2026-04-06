@@ -82,7 +82,7 @@ export function ContactUsSection() {
             <ContactInfoCard {...info} key={i} />
           ))}
         </div>
-        <div className="w-full bg-[#F7F7F9] p-10">
+        <div className="w-full bg-[#F7F7F9] p-6 lg:p-10">
           <ContactForm />
         </div>
       </div>
