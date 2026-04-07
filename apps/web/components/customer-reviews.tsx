@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { StarIcon } from "@phosphor-icons/react/dist/ssr"
 import { motion } from "framer-motion"
@@ -136,14 +136,16 @@ function ReviewCard({
       }}
     >
       <Card className="rounded-[5px] py-10 ring-0">
-        <CardContent className="flex flex-col gap-10 px-10">
+        <CardContent className="flex flex-col gap-10 px-6 lg:px-10">
           <div className="flex items-center gap-4">
             {Array.from({ length: 5 }).map((item, i) => (
               <StarIcon
                 weight="fill"
                 key={i}
                 color={
-                  i + 1 <= rating ? "var(--color-primary)" : "var(--color-muted)"
+                  i + 1 <= rating
+                    ? "var(--color-primary)"
+                    : "var(--color-muted)"
                 }
                 className={cn("size-6")}
               />
@@ -154,11 +156,11 @@ function ReviewCard({
           </p>
         </CardContent>
 
-        <CardFooter className="border-t-0 bg-card px-10 pb-10">
+        <CardFooter className="border-t-0 bg-card px-6 pb-10 lg:px-10">
           <div className="flex items-center gap-4">
             <div
               className={cn(
-                "flex size-10 items-center justify-center rounded-[5px] bg-primary/5 text-base font-medium",
+                "flex size-10 shrink-0 items-center justify-center rounded-[5px] bg-primary/5 text-base font-medium",
                 background,
                 color
               )}
