@@ -58,7 +58,10 @@ const possibleColors = [
 ]
 export function CustomerReviewsSection() {
   return (
-    <section className="mx-auto flex flex-col items-center justify-center gap-10 bg-[#F7F7F9] px-6 py-20 lg:px-10">
+    <section
+      id="testimonials"
+      className="mx-auto flex flex-col items-center justify-center gap-10 bg-[#F7F7F9] px-6 py-20 lg:px-10"
+    >
       <div className="flex w-full max-w-7xl flex-col items-center gap-10">
         <motion.header
           initial={{ opacity: 0, y: 30 }}

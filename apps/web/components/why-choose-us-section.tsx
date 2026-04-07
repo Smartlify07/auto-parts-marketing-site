@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Icon } from "@phosphor-icons/react"
 import {
@@ -44,7 +44,10 @@ const whyChooseUs = [
 ]
 export function WhyChooseUsSection() {
   return (
-    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
+    <section
+      id="why-us"
+      className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10"
+    >
       <div className="flex w-full max-w-7xl flex-col items-center gap-10">
         <motion.header
           initial={{ opacity: 0, y: 30 }}
@@ -84,7 +87,7 @@ export function WhyChooseUsSection() {
           <WhyChooseUsCard
             {...item}
             index={item.id}
-            CardIcon={item.icon}
+            icon={item.icon}
             key={item.id}
           />
         ))}
@@ -96,14 +99,15 @@ export function WhyChooseUsSection() {
 function WhyChooseUsCard({
   title,
   index,
-  CardIcon,
+  icon,
   description,
 }: {
   title: string
   index: number
-  CardIcon: Icon
+  icon: Icon
   description: string
 }) {
+  const CardIcon = icon
   return (
     <motion.div
       variants={{
@@ -115,7 +119,7 @@ function WhyChooseUsCard({
         },
       }}
     >
-      <Card className="gap-6 border-r border-b px-5 py-10 ring-0 last:border-b-0 lg:nth-of-type-[3]:border-b-0">
+      <Card className="gap-6 border-b py-10 ring-0 lg:border-r lg:px-5 lg:last:border-b-0 lg:nth-of-type-[3]:border-b-0">
         <div className="flex items-center justify-between">
           <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
             <CardIcon className="size-6 text-primary" />
@@ -130,7 +134,9 @@ function WhyChooseUsCard({
             {title}
           </CardTitle>
 
-          <p className="text-base tracking-[2%] text-foreground">{description}</p>
+          <p className="text-base tracking-[2%] text-foreground">
+            {description}
+          </p>
         </div>
       </Card>
     </motion.div>

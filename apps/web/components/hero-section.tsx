@@ -6,7 +6,10 @@ import { Button } from "@workspace/ui/components/button"
 
 export function HeroSection() {
   return (
-    <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
+    <section
+      id="home"
+      className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10"
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,7 +38,7 @@ export function HeroSection() {
           }}
           className="text-center text-4xl font-semibold tracking-[2%] lg:text-7xl"
         >
-          QUALITY AUTO-PARTS
+          QUALITY <br className="lg:hidden" /> AUTO-PARTS
         </motion.h1>
       </motion.div>
 
@@ -64,7 +67,9 @@ export function HeroSection() {
         }}
         className="flex flex-col items-center gap-5 lg:flex-row lg:gap-10"
       >
-        <Button className="h-12 text-base uppercase">Request a quote</Button>
+        <Button className="h-12 w-48 text-base uppercase">
+          Request a quote
+        </Button>
         <Button className="h-12 w-48 text-base uppercase" variant={"link"}>
           Browse catalogue <ArrowRightIcon />
         </Button>

@@ -11,13 +11,15 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <CompatibleBrandsSection />
-      <CatalogueSection />
-      <WhyChooseUsSection />
-      <CustomerReviewsSection />
-      <ContactUsSection />
-      <Footer />
+      <div className="mt-20">
+        <HeroSection />
+        <CompatibleBrandsSection />
+        <CatalogueSection />
+        <WhyChooseUsSection />
+        <CustomerReviewsSection />
+        <ContactUsSection />
+        <Footer />
+      </div>
     </>
   )
 }

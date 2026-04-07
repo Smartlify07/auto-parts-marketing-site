@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import Image from "next/image"
 import React from "react"
@@ -25,7 +25,7 @@ export function CompatibleBrandsSection() {
         transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="text-center font-semibold tracking-[40%] text-foreground"
       >
-        CERTIFIED WHOLESALE DISTRIBUTOR
+        COMPATIBLE WITH ALL MAJOR BRANDS{" "}
       </motion.h4>
 
       <motion.div
@@ -39,7 +39,7 @@ export function CompatibleBrandsSection() {
             transition: { staggerChildren: 0.15, delayChildren: 0.1 },
           },
         }}
-        className="flex flex-wrap items-center justify-center gap-10"
+        className="grid grid-cols-2 items-center justify-center gap-10 lg:flex"
       >
         {brandLogos.map((logo, index) => (
           <motion.div
