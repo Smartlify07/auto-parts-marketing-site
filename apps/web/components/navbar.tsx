@@ -6,9 +6,10 @@ import Link from "next/link"
 import { Button } from "@workspace/ui/components/button"
 import { cn } from "@workspace/ui/lib/utils"
 import { motion, AnimatePresence } from "framer-motion"
+import { usePathname } from "next/navigation"
 
 const menu = [
-  { label: "Home", path: "#home" },
+  { label: "Home", path: "/" },
   { label: "Catalogue", path: "#catalogue" },
   { label: "Why Us", path: "#why-us" },
   { label: "Testimonials", path: "#testimonials" },
@@ -16,7 +17,7 @@ const menu = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-
+  const pathname = usePathname()
   useEffect(() => {
     if (isOpen) {
       const timer = setTimeout(() => setIsOpen(false), 10000)
@@ -36,7 +37,15 @@ export function Navbar() {
         />
         <div className="hidden items-center gap-10 lg:flex">
           {menu.map((item) => (
-            <Link className="uppercase" key={item.path} href={item.path}>
+            <Link
+              className={cn(
+                "text-foreground/80 uppercase hover:text-foreground",
+                pathname === item.path &&
+                  "border-b-2 border-b-primary text-primary"
+              )}
+              key={item.path}
+              href={item.path}
+            >
               {item.label}
             </Link>
           ))}
