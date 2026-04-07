@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@phosphor-icons/react"
 import {
   ArrowRight,
@@ -7,6 +9,7 @@ import {
   PhoneIcon,
   WarehouseIcon,
 } from "@phosphor-icons/react/dist/ssr"
+import { motion } from "framer-motion"
 import { Button } from "@workspace/ui/components/button"
 import { Card } from "@workspace/ui/components/card"
 import {
@@ -54,7 +57,13 @@ export function ContactUsSection() {
   return (
     <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
       <div className="flex w-full max-w-7xl flex-col items-center gap-10">
-        <header className="flex flex-col items-center gap-6 text-center">
+        <motion.header
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="flex flex-col items-center gap-6 text-center"
+        >
           <h4 className="text-base font-medium tracking-[40%] text-primary uppercase">
             04 - Get In touch
           </h4>
@@ -66,25 +75,49 @@ export function ContactUsSection() {
             Our team responds with pricing, availability and trade account
             details
           </p>
-        </header>
+        </motion.header>
 
-        <div className="flex w-full flex-col gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="flex w-full flex-col gap-4"
+        >
           <h3 className="text-lg font-semibold text-foreground uppercase">
             Contact Details
           </h3>
           <p className="text-base font-normal">
             Reach us directly or fill the form and we'll come to you.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex w-full flex-col gap-5">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+            },
+          }}
+          className="flex w-full flex-col gap-5"
+        >
           {contactInfo.map((info, i) => (
             <ContactInfoCard {...info} key={i} />
           ))}
-        </div>
-        <div className="w-full bg-[#F7F7F9] p-6 lg:p-10">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="w-full bg-[#F7F7F9] p-6 lg:p-10"
+        >
           <ContactForm />
-        </div>
+        </motion.div>
       </div>
     </section>
   )
@@ -101,20 +134,31 @@ function ContactInfoCard({
 }) {
   const ContactIcon = icon
   return (
-    <Card className="h-25 border-b ring-0">
-      <div className="flex items-center gap-4">
-        <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/5">
-          <ContactIcon className="size-6 text-primary" />
-        </div>
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, x: -20 },
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] },
+        },
+      }}
+    >
+      <Card className="h-25 border-b ring-0">
+        <div className="flex items-center gap-4">
+          <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/5">
+            <ContactIcon className="size-6 text-primary" />
+          </div>
 
-        <div className="flex flex-col">
-          <h3 className="text-base font-semibold tracking-[2%] text-foreground uppercase">
-            {title}
-          </h3>
-          <p className="text-sm tracking-[2%] text-foreground">{value}</p>
+          <div className="flex flex-col">
+            <h3 className="text-base font-semibold tracking-[2%] text-foreground uppercase">
+              {title}
+            </h3>
+            <p className="text-sm tracking-[2%] text-foreground">{value}</p>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </motion.div>
   )
 }
 

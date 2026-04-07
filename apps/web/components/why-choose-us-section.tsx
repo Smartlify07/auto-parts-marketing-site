@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@phosphor-icons/react"
 import {
   ArrowRightIcon,
@@ -6,6 +8,7 @@ import {
   HeadsetIcon,
   TruckIcon,
 } from "@phosphor-icons/react/dist/ssr"
+import { motion } from "framer-motion"
 import { Card, CardTitle } from "@workspace/ui/components/card"
 import Link from "next/link"
 
@@ -43,7 +46,13 @@ export function WhyChooseUsSection() {
   return (
     <section className="mx-auto flex flex-col items-center justify-center gap-10 px-6 py-20 lg:px-10">
       <div className="flex w-full max-w-7xl flex-col items-center gap-10">
-        <header className="flex flex-col items-center gap-6 text-center">
+        <motion.header
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="flex flex-col items-center gap-6 text-center"
+        >
           <h4 className="text-base font-medium tracking-[40%] text-primary uppercase">
             02- Why us
           </h4>
@@ -55,10 +64,22 @@ export function WhyChooseUsSection() {
             We've spent years building the most reliable wholesale auto parts
             operation in the country.
           </p>
-        </header>
+        </motion.header>
       </div>
 
-      <div className="grid w-full lg:grid-cols-2">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+          },
+        }}
+        className="grid w-full lg:grid-cols-2"
+      >
         {whyChooseUs.map((item) => (
           <WhyChooseUsCard
             {...item}
@@ -67,7 +88,7 @@ export function WhyChooseUsSection() {
             key={item.id}
           />
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
@@ -84,23 +105,34 @@ function WhyChooseUsCard({
   description: string
 }) {
   return (
-    <Card className="gap-6 border-r border-b px-5 py-10 ring-0 last:border-b-0 lg:nth-of-type-[3]:border-b-0">
-      <div className="flex items-center justify-between">
-        <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
-          <CardIcon className="size-6 text-primary" />
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] },
+        },
+      }}
+    >
+      <Card className="gap-6 border-r border-b px-5 py-10 ring-0 last:border-b-0 lg:nth-of-type-[3]:border-b-0">
+        <div className="flex items-center justify-between">
+          <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
+            <CardIcon className="size-6 text-primary" />
+          </div>
+          <h1 className="text-primary/ font-mono text-5xl tracking-[11%] text-foreground/20">
+            0{index}
+          </h1>
         </div>
-        <h1 className="text-primary/ font-mono text-5xl tracking-[11%] text-foreground/20">
-          0{index}
-        </h1>
-      </div>
 
-      <div className="flex flex-col gap-6">
-        <CardTitle className="font-sans text-2xl font-semibold text-foreground uppercase">
-          {title}
-        </CardTitle>
+        <div className="flex flex-col gap-6">
+          <CardTitle className="font-sans text-2xl font-semibold text-foreground uppercase">
+            {title}
+          </CardTitle>
 
-        <p className="text-base tracking-[2%] text-foreground">{description}</p>
-      </div>
-    </Card>
+          <p className="text-base tracking-[2%] text-foreground">{description}</p>
+        </div>
+      </Card>
+    </motion.div>
   )
 }
