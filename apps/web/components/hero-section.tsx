@@ -22,9 +22,7 @@ export function HeroSection() {
       </blockquote>
 
       <div className="flex flex-col items-center gap-5 lg:flex-row lg:gap-10">
-        <Button className="h-12 w-48 text-base uppercase">
-          Request a quote
-        </Button>
+        <Button className="h-12 text-base uppercase">Request a quote</Button>
         <Button className="h-12 w-48 text-base uppercase" variant={"link"}>
           Browse catalogue <ArrowRight />
         </Button>

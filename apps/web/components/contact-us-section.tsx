@@ -108,7 +108,7 @@ function ContactInfoCard({
         </div>
 
         <div className="flex flex-col">
-          <h3 className="text-base font-semibold tracking-[40%] text-foreground uppercase">
+          <h3 className="text-base font-semibold tracking-[2%] text-foreground uppercase">
             {title}
           </h3>
           <p className="text-sm tracking-[2%] text-foreground">{value}</p>

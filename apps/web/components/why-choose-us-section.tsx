@@ -89,17 +89,17 @@ function WhyChooseUsCard({
         <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
           <CardIcon className="size-6 text-primary" />
         </div>
-        <h1 className="font-mono text-5xl tracking-[11%] text-primary/5">
+        <h1 className="text-primary/ font-mono text-5xl tracking-[11%] text-foreground/20">
           0{index}
         </h1>
       </div>
 
       <div className="flex flex-col gap-6">
-        <CardTitle className="font-sans text-2xl font-semibold uppercase">
+        <CardTitle className="font-sans text-2xl font-semibold text-foreground uppercase">
           {title}
         </CardTitle>
 
-        <p className="text-base tracking-[2%]">{description}</p>
+        <p className="text-base tracking-[2%] text-foreground">{description}</p>
       </div>
     </Card>
   )

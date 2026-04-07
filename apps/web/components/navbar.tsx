@@ -46,9 +46,9 @@ export function Navbar() {
       </Button>
 
       <div className="flex flex-col gap-1 lg:hidden">
-        <span className="h-1 w-12 bg-foreground"></span>
-        <span className="h-1 w-12 bg-foreground"></span>
-        <span className="h-1 w-12 bg-foreground"></span>
+        <span className="h-1 w-8 bg-foreground"></span>
+        <span className="h-1 w-8 bg-foreground"></span>
+        <span className="h-1 w-8 bg-foreground"></span>
       </div>
     </nav>
   )

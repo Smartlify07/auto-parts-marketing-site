@@ -13,7 +13,11 @@ export function CompatibleBrandsSection() {
 
       <div className="flex flex-wrap items-center justify-center gap-10">
         <Image src={LexusLogo} alt="Lexus Logo" />
-        <Image src={NissanLogo} alt="Nissan Logo" />
+        <Image
+          src={NissanLogo}
+          alt="Nissan Logo"
+          className="h-6 transition-transform hover:-translate-y-2"
+        />
         <Image src={ToyotaLogo} alt="Toyota Logo" />
         <Image src={SubaruLogo} alt="Subaru Logo" />
       </div>

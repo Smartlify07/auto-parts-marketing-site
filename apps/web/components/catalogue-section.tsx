@@ -98,13 +98,13 @@ function CatalogueCard({
         <CardTitle className="text-center font-sans text-base font-normal tracking-[2%] text-primary">
           0{id}
         </CardTitle>
-        <div className="flex size-16 items-center justify-center rounded-md bg-primary/5">
-          <Icon className="size-8" />
+        <div className="flex size-16 items-center justify-center rounded-md bg-primary/10">
+          <Icon className="size-8 text-primary" />
         </div>
       </CardHeader>
       <CardContent className="flex flex-col items-center gap-6 text-center">
         <div className="flex flex-col items-center gap-4">
-          <CardTitle className="text-center text-lg font-medium tracking-[2%] uppercase">
+          <CardTitle className="text-center font-sans text-lg font-semibold tracking-[2%] text-foreground uppercase">
             {title}
           </CardTitle>
           <p className="text-base tracking-[2%] text-foreground">

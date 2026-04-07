@@ -107,11 +107,13 @@ function ReviewCard({
     <Card className="rounded-[5px] py-10 ring-0">
       <CardContent className="flex flex-col gap-10 px-10">
         <div className="flex items-center gap-4">
-          {Array.from({ length: rating }).map((item, i) => (
+          {Array.from({ length: 5 }).map((item, i) => (
             <StarIcon
               weight="fill"
               key={i}
-              color={i + 1 <= rating ? "var(--color-primary)" : ""}
+              color={
+                i + 1 <= rating ? "var(--color-primary)" : "var(--color-muted)"
+              }
               className={cn("size-6")}
             />
           ))}
@@ -135,10 +137,12 @@ function ReviewCard({
           </div>
 
           <div className="flex flex-col gap-1">
-            <h1 className="text-lg font-semibold tracking-[2%] uppercase">
+            <h1 className="text-lg font-semibold tracking-[2%] text-foreground uppercase">
               {author.firstName} {author.lastName}
             </h1>
-            <p className="text-base tracking-[2%]">{author.role}</p>
+            <p className="text-base tracking-[2%] text-foreground">
+              {author.role}
+            </p>
           </div>
         </div>
       </CardFooter>
