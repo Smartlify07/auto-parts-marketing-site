@@ -51,8 +51,8 @@ export function Navbar() {
           ))}
         </div>
 
-        <Button className="hidden h-12 w-32 uppercase lg:flex">
-          Get a quote
+        <Button className="button hidden h-12 w-32 uppercase lg:flex">
+          <span>Get a quote</span>
         </Button>
 
         <button
@@ -117,8 +117,8 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: menu.length * 0.1 }}
               >
-                <Button className="h-12 w-40 text-base uppercase lg:text-lg">
-                  Get a quote
+                <Button className="button h-12 w-40 text-base uppercase lg:text-lg">
+                  <span>Get a quote</span>
                 </Button>
               </motion.div>
             </motion.div>
