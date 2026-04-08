@@ -42,7 +42,7 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="flex flex-col items-start gap-4 lg:basis-1/2">
             <Image src={Logo} alt="Logo Image" />
-            <p className="text-muted-foreground">
+            <p className="text-sm text-muted-foreground lg:text-base">
               Your trusted wholesale auto spare parts supplier,quality, speed,
               and reliability built for trade professionals across Nigeria.
             </p>
@@ -60,7 +60,7 @@ export function Footer() {
                     <Link
                       key={i}
                       href={link.url}
-                      className="text-base tracking-[2%] text-muted-foreground"
+                      className="text-sm tracking-[2%] text-muted-foreground hover:text-primary lg:text-base"
                     >
                       {link.label}
                     </Link>
@@ -71,14 +71,16 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-40">
+        <div className="flex flex-col gap-10 lg:gap-20">
           <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
             <p className="text-muted-foreground">
               Privacy © 2025{" "}
-              <span className="font-medium text-primary">compisium</span>{" "}
+              <span className="text-sm font-medium text-primary lg:text-base">
+                compisium
+              </span>{" "}
               Parts. All rights reserved. Policy
             </p>
-            <div className="grid gap-4 lg:grid-cols-3 lg:justify-items-end">
+            <div className="grid gap-2 lg:grid-cols-3 lg:justify-items-end lg:gap-4 [&>a]:text-sm lg:[&>a]:text-base">
               <Link href="#" className="text-muted-foreground">
                 Privacy Policy
               </Link>
