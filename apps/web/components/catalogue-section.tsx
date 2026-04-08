@@ -127,7 +127,7 @@ function CatalogueCard({
         },
       }}
     >
-      <Card className="gap-6 py-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] ring-0">
+      <Card className="gap-6 py-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] ring-0 transition-transform hover:scale-101">
         <CardHeader className="flex flex-col items-center gap-6">
           <CardTitle className="text-center font-sans text-base font-normal tracking-[2%] text-primary">
             0{id}
