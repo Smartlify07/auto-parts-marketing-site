@@ -1,14 +1,9 @@
-import {
-  Geist,
-  Geist_Mono,
-  Instrument_Sans,
-  JetBrains_Mono,
-  Slackey,
-} from "next/font/google"
+import { Instrument_Sans, Slackey } from "next/font/google"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@workspace/ui/lib/utils"
+import { Metadata } from "next"
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -20,6 +15,12 @@ const slackey = Slackey({
   variable: "--font-mono",
   weight: ["400"],
 })
+
+export const metadata: Metadata = {
+  title: "Auto Spare Parts Company",
+  description: "A demo page for an auto spare parts company",
+  metadataBase: new URL("https://auto-parts-marketing-site.vercel.app"),
+}
 
 export default function RootLayout({
   children,

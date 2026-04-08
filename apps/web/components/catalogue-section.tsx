@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Icon } from "@phosphor-icons/react"
 import {
@@ -144,7 +144,7 @@ function CatalogueCard({
           </div>
           <Link
             href="#"
-            className="flex items-center gap-2 text-center text-muted-foreground uppercase [&>svg]:transition-transform hover:[&>svg]:translate-x-1"
+            className="flex items-center gap-2 text-center text-muted-foreground uppercase hover:text-primary [&>svg]:transition-transform hover:[&>svg]:translate-x-1"
           >
             Enquire <ArrowRightIcon />
           </Link>
