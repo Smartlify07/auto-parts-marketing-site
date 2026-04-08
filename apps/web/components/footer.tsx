@@ -73,11 +73,9 @@ export function Footer() {
 
         <div className="flex flex-col gap-10 lg:gap-20">
           <div className="flex flex-col justify-between gap-10 lg:flex-row lg:items-center">
-            <p className="text-muted-foreground">
+            <p className="text-sm text-muted-foreground lg:text-base">
               Privacy © 2025{" "}
-              <span className="text-sm font-medium text-primary lg:text-base">
-                compisium
-              </span>{" "}
+              <span className="font-medium text-primary">compisium</span>{" "}
               Parts. All rights reserved. Policy
             </p>
             <div className="grid gap-2 lg:grid-cols-3 lg:justify-items-end lg:gap-4 [&>a]:text-sm lg:[&>a]:text-base">
