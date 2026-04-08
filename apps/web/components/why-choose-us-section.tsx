@@ -11,6 +11,7 @@ import {
 import { motion } from "framer-motion"
 import { Card, CardTitle } from "@workspace/ui/components/card"
 import Link from "next/link"
+import { cn } from "@workspace/ui/lib/utils"
 
 const whyChooseUs = [
   {
@@ -119,7 +120,12 @@ function WhyChooseUsCard({
         },
       }}
     >
-      <Card className="gap-6 border-b py-10 ring-0 lg:border-r lg:px-5 lg:last:border-b-0 lg:nth-of-type-[3]:border-b-0">
+      <Card
+        className={cn(
+          "gap-6 border-b py-10 ring-0 lg:border-r lg:px-5",
+          index > 2 && "lg:border-b-0"
+        )}
+      >
         <div className="flex items-center justify-between">
           <div className="flex size-12 items-center justify-center rounded-[5px] bg-primary/10">
             <CardIcon className="size-6 text-primary" />
