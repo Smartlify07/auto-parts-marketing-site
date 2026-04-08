@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr"
 import { Button } from "@workspace/ui/components/button"
+import { GearIcon } from "@phosphor-icons/react"
 
 export function HeroSection() {
   return (
@@ -67,8 +68,8 @@ export function HeroSection() {
         }}
         className="flex flex-col items-center gap-5 lg:flex-row lg:gap-10"
       >
-        <Button className="h-12 w-48 text-base uppercase">
-          Request a quote
+        <Button className="button hover:bg-[] relative h-12 w-48 overflow-hidden text-base uppercase [&>svg]:transition-all [&>svg]:duration-1000 hover:[&>svg]:translate-y-4 hover:[&>svg]:rotate-180 hover:[&>svg]:opacity-100">
+          <span>Request a quote</span>
         </Button>
         <Button className="h-12 w-48 text-base uppercase" variant={"link"}>
           Browse catalogue <ArrowRightIcon />

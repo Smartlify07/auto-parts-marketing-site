@@ -52,9 +52,21 @@ const customerReviews: Review[] = [
   },
 ]
 const possibleColors = [
-  { color: "text-blue-600", background: "bg-blue-600/10" },
-  { color: "text-green-600", background: "bg-green-600/10" },
-  { color: "text-orange-600", background: "bg-orange-600/10" },
+  {
+    color: "text-blue-600",
+    background: "bg-blue-600/10",
+    border: "border-blue-600",
+  },
+  {
+    color: "text-green-600",
+    background: "bg-green-600/10",
+    border: "border-green-600",
+  },
+  {
+    color: "text-orange-600",
+    background: "bg-orange-600/10",
+    border: "border-orange-600",
+  },
 ]
 export function CustomerReviewsSection() {
   return (
@@ -98,12 +110,12 @@ export function CustomerReviewsSection() {
         className="flex w-full flex-col gap-6"
       >
         {customerReviews.map((review, i) => {
-          const randomColor = Math.floor(Math.random() * possibleColors.length)
-          const color = possibleColors[randomColor]
+          const color = possibleColors[0]
           return (
             <ReviewCard
               background={color?.background ?? ""}
               color={color?.color ?? ""}
+              border={color?.border ?? ""}
               key={i}
               {...review}
             />
@@ -120,12 +132,14 @@ function ReviewCard({
   message,
   color,
   background,
+  border,
 }: {
   rating: number
   author: { firstName: string; lastName: string; role: string }
   message: string
   color: string
   background: string
+  border: string
 }) {
   return (
     <motion.div
@@ -154,13 +168,18 @@ function ReviewCard({
               />
             ))}
           </div>
-          <p className="border-l-2 border-l-primary pl-4 text-base tracking-[2%] lg:w-9/12">
+          <p
+            className={cn(
+              "border-l-2 border-l-primary pl-4 text-base tracking-[2%] lg:w-9/12",
+              border
+            )}
+          >
             {message}
           </p>
         </CardContent>
 
         <CardFooter className="border-t-0 bg-card px-6 pb-10 lg:px-10">
-          <div className="flex items-center gap-4">
+          <div className="flex items-start gap-4">
             <div
               className={cn(
                 "flex size-10 shrink-0 items-center justify-center rounded-[5px] bg-primary/5 text-base font-medium",
@@ -173,10 +192,10 @@ function ReviewCard({
             </div>
 
             <div className="flex flex-col gap-1">
-              <h1 className="text-lg font-semibold tracking-[2%] text-foreground uppercase">
+              <h1 className="text-sm font-semibold tracking-[2%] text-foreground uppercase lg:text-base">
                 {author.firstName} {author.lastName}
               </h1>
-              <p className="text-base tracking-[2%] text-foreground">
+              <p className="text-sm tracking-[2%] text-foreground lg:text-base">
                 {author.role}
               </p>
             </div>

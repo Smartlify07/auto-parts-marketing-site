@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Icon } from "@phosphor-icons/react"
 import {
@@ -81,7 +81,11 @@ export function ContactUsSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{
+            duration: 0.6,
+            delay: 0.1,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
           className="flex w-full flex-col gap-4"
         >
           <h3 className="text-lg font-semibold text-foreground uppercase">
@@ -113,7 +117,11 @@ export function ContactUsSection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{
+            duration: 0.6,
+            delay: 0.3,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
           className="w-full bg-[#F7F7F9] p-6 lg:p-10"
         >
           <ContactForm />
@@ -276,8 +284,10 @@ function ContactForm() {
             </FieldGroup>
           </FieldSet>
           <Field orientation="horizontal" className="w-full">
-            <Button type="submit" className={"h-12 w-full text-base"}>
-              Send Enquiry <ArrowRightIcon />
+            <Button type="submit" className={"button h-12 w-full text-base"}>
+              <span>
+                Send Enquiry <ArrowRightIcon />
+              </span>
             </Button>
           </Field>
         </FieldGroup>
