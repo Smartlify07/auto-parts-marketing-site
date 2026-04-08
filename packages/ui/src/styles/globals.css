@@ -132,11 +132,12 @@
   position: relative;
   font-family: inherit;
   cursor: pointer;
-  background: var(--color-foreground);
+  background: var(--color-transparent);
   color: var(--color-background);
   background-size: 100px 100px;
   overflow: hidden;
   border-radius: 5px;
+  transition: background 0.3s;
 }
 
 .button span {
@@ -160,11 +161,15 @@
 .button::before {
   content: "";
   background: var(--color-primary);
-  width: 120%;
-  left: -10%;
+  width: 160%;
+  left: -30%;
   transform: skew(30deg);
   transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   border-radius: 5px;
+}
+
+.button:hover {
+  background: var(--color-foreground);
 }
 
 .button:hover::before {

@@ -161,7 +161,7 @@ function ReviewCard({
                 key={i}
                 color={
                   i + 1 <= rating
-                    ? "var(--color-primary)"
+                    ? "var(--color-yellow-500)"
                     : "var(--color-muted)"
                 }
                 className={cn("size-6")}
@@ -170,7 +170,7 @@ function ReviewCard({
           </div>
           <p
             className={cn(
-              "border-l-2 border-l-primary pl-4 text-base tracking-[2%] lg:w-9/12",
+              "border-l-2 border-l-primary pl-4 text-base tracking-[2%] text-foreground lg:w-9/12",
               border
             )}
           >
