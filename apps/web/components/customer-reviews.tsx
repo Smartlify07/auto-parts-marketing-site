@@ -1,6 +1,10 @@
 "use client"
 
-import { StarIcon } from "@phosphor-icons/react/dist/ssr"
+import {
+  ArrowLineRightIcon,
+  ArrowRightIcon,
+  StarIcon,
+} from "@phosphor-icons/react/dist/ssr"
 import { motion } from "framer-motion"
 import {
   Card,
@@ -9,6 +13,7 @@ import {
   CardHeader,
 } from "@workspace/ui/components/card"
 import { cn } from "@workspace/ui/lib/utils"
+import Link from "next/link"
 
 type Review = {
   rating: number
@@ -122,6 +127,13 @@ export function CustomerReviewsSection() {
           )
         })}
       </motion.div>
+
+      <Link
+        href={"#"}
+        className="flex items-center gap-4 tracking-[10%] text-primary uppercase"
+      >
+        See more <ArrowRightIcon />
+      </Link>
     </section>
   )
 }

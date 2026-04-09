@@ -61,17 +61,17 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           <motion.span
-            className="block h-1 w-8 bg-foreground"
+            className="block h-0.5 w-6 bg-foreground"
             animate={isOpen ? { rotate: 45, y: 10 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="block h-1 w-8 bg-foreground"
+            className="block h-0.5 w-6 bg-foreground"
             animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="block h-1 w-8 bg-foreground"
+            className="block h-0.5 w-6 bg-foreground"
             animate={isOpen ? { rotate: -45, y: -10 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />

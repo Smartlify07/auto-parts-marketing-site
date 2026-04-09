@@ -1,6 +1,5 @@
 "use client"
 
-import { Icon } from "@phosphor-icons/react"
 import {
   ArrowRightIcon,
   CarBatteryIcon,
@@ -16,41 +15,48 @@ import {
   CardHeader,
   CardTitle,
 } from "@workspace/ui/components/card"
+import { Icon } from "@iconify/react"
 
 const catalogue = [
   {
     id: 1,
-    Icon: SteeringWheelIcon,
+    Icon: <Icon icon="boxicons:spanner" width="24" height="24" />,
     title: "Engine Components",
     skuUnits: 1340,
   },
   {
     id: 2,
-    Icon: SteeringWheelIcon,
+    Icon: <Icon icon="lucide-lab:tire" width="24" height="24" />,
     title: "Brake & Rotors",
     skuUnits: 879,
   },
   {
     id: 3,
-    Icon: CarIcon,
+    Icon: (
+      <Icon
+        icon="material-symbols:electric-car-rounded"
+        width="24"
+        height="24"
+      />
+    ),
     title: "Electrical Systems",
     skuUnits: 1270,
   },
   {
     id: 4,
-    Icon: SteeringWheelIcon,
+    Icon: <Icon icon="mdi:steering" width="24" height="24" />,
     title: "Suspension & Steering",
     skuUnits: 2012,
   },
   {
     id: 5,
-    Icon: CarBatteryIcon,
+    Icon: <Icon icon="mdi:car-battery" width="24" height="24" />,
     title: "Batteries & Starters",
     skuUnits: 1879,
   },
   {
     id: 6,
-    Icon: CarBatteryIcon,
+    Icon: <Icon icon="game-icons:car-door" width="24" height="24" />,
     title: "Body Exterior",
     skuUnits: 659,
   },
@@ -113,7 +119,7 @@ function CatalogueCard({
 }: {
   title: string
   skuUnits: number
-  Icon: Icon
+  Icon: React.JSX.Element
   id: number
 }) {
   return (
@@ -127,13 +133,13 @@ function CatalogueCard({
         },
       }}
     >
-      <Card className="gap-6 py-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] ring-0 transition-transform hover:scale-101">
+      <Card className="gap-6 py-10 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.04)] ring-0 transition-transform hover:scale-105">
         <CardHeader className="flex flex-col items-center gap-6">
           <CardTitle className="text-center font-sans text-base font-normal tracking-[2%] text-primary">
             0{id}
           </CardTitle>
-          <div className="flex size-16 items-center justify-center rounded-md bg-primary/10">
-            <Icon className="size-8 text-primary" />
+          <div className="flex size-16 items-center justify-center rounded-md bg-primary/10 [&>svg]:text-primary">
+            {Icon}
           </div>
         </CardHeader>
         <CardContent className="flex flex-col items-center gap-6 text-center">
