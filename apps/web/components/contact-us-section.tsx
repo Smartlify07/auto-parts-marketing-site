@@ -208,7 +208,8 @@ function ContactForm() {
 
           <FieldSet>
             <FieldLegend className="text-xs tracking-[40%] uppercase">
-              Business/Company Name
+              Business/Company Name{" "}
+              <span className="text-xs text-muted-foreground">(Optional)</span>
             </FieldLegend>
             <FieldGroup>
               <Field>

@@ -36,7 +36,9 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>
-        <FollowCursor />
+        <div className="hidden lg:block">
+          <FollowCursor />
+        </div>
       </body>
     </html>
   )

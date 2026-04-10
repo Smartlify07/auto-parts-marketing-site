@@ -121,6 +121,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 @layer base {
@@ -141,7 +142,7 @@ html {
   background-size: 100px 100px;
   overflow: hidden;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.6s;
 }
 
 .button span {

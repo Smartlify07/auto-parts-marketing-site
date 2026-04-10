@@ -93,7 +93,10 @@ const FollowCursor: React.FC<FollowCursorProps> = ({
       canvas.width = width
       canvas.height = height
       canvas.style.zIndex = zIndex ? zIndex.toString() : ""
-      document.body.appendChild(canvas)
+      const media = window.matchMedia("(min-width:1024px)")
+      if (media.matches) {
+        document.body.appendChild(canvas)
+      }
 
       window.addEventListener("mousemove", onMouseMove)
       window.addEventListener("resize", onWindowResize)
