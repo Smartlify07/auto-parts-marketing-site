@@ -285,10 +285,11 @@ function ContactForm() {
             </FieldGroup>
           </FieldSet>
           <Field orientation="horizontal" className="w-full">
-            <Button type="submit" className={"button h-12 w-full text-base"}>
-              <span>
-                Send Enquiry <ArrowRightIcon />
-              </span>
+            <Button
+              type="submit"
+              className={"flex h-12 w-full flex-row text-base"}
+            >
+              Send Enquiry <ArrowRightIcon />
             </Button>
           </Field>
         </FieldGroup>
